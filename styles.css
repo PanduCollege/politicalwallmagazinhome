@@ -1,0 +1,202 @@
+#embeddedContent {
+  width: 100%;
+  height: 100%; 
+  border: none;
+} 
+
+  h1 {
+    font-size: 70px;
+    padding-top: 55%;
+    color: rgb(247, 247, 247);
+    text-align: center;
+    position: absolute;
+    text-shadow: 4px 4px 0px black; 
+    top: 0%;
+    left: 10%;
+    transform: none; 
+}
+h2 {
+  font-size: 45px;
+  padding-top: 55%;
+  padding-left: 3%;
+  padding-right: 3%;
+  color: rgb(255, 255, 255);
+  text-align: justify;
+  position: absolute;
+  text-shadow: 4px 4px 0px black; 
+  top: 0%;
+  left: 0%;
+  transform: none; 
+}
+  
+  
+  /*************************************************************
+    HEADER
+  **************************************************************/
+  header {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    transform-style: inherit;
+    z-index: -1;
+  }
+  
+  header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: block;
+    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(img/1.jpg) top center;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2.1);
+    min-height: 100%;
+    z-index: -2;
+  }
+  
+  
+  /*************************************************************
+    SECTIONS
+  **************************************************************/
+  section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    transform-style: inherit;
+  }
+  
+  .section1 {
+    background: #fafafa;
+    box-shadow: 0 0 20px #333;
+    z-index: 1;
+  }
+  
+  .section2::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: block;
+    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(img/2.jpg) top center;
+    background-size: cover;
+    transform: translateZ(-.5px) scale(1.6);
+    z-index: -1;
+  }
+  
+  /*************************************************************
+    HEADINGS
+  **************************************************************/
+  
+  .book {
+    height: 100%;
+    width: 100%;
+    color: black;
+    font-size: 50PX;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateZ(-1px) scale(2) translate(-25%, -25%);
+    }
+  
+  .section1 .book{
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    box-shadow: none;
+  }
+  
+  .section2 h1 {
+    transform: translateZ(-.3px) scale(1.3) translate(-39%, -39%);
+    z-index: 3;
+  }
+  
+  .section1 .book{
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    box-shadow: none;
+  }
+  
+  .section2 h1 {
+    transform: translateZ(-.3px) scale(1.3) translate(-39%, -39%);
+    z-index: 3;
+  }
+  /*************************************************************
+    BASIC STYLES
+  **************************************************************/
+  *,
+  *::before,
+  *::after,
+  :root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+ 
+  
+  @import 'https://fonts.googleapis.com/css?family=Overlock:400,400i,700|Oleo+Script';
+  
+  html {
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+    perspective: 1px;
+    transform-style: preserve-3d; 
+    font-family: 'Overlock', Arial, Helvetica, sans-serif;
+    
+  }
+
+  @media (max-width: 600px) {
+    h1{
+      font-size: 27px;
+      text-align: center;
+      align-items: center;
+      position: sticky;
+    }
+    h2{
+      font-size: 15px;
+    }
+    h3{
+      padding-top: 120px;
+      bottom: 0;
+      color: blue;
+      text-align: center;
+      font-size: 10px;;
+      
+    }
+  
+    h3 a{
+      text-decoration: none;
+      color: orangered;
+    }
+  .deep{ 
+    display: block;
+  }
+
+  .turn{
+    display: none;
+  }
+}
+@media screen and (orientation:landscape) {
+  .deep{ 
+      display: none;
+  }
+  .turn{
+      display: block;
+  }
+  body{
+      background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(img/e.jpg) top center;
+  }
+  h1{
+      color: white;
+      text-align: center;
+      align-items: center;
+      font-size: 45px;
+      padding-top: 12%;
+      padding-left: 10%;
+  }
+}
